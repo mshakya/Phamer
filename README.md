@@ -1,9 +1,10 @@
 # PhameR
 
 Phame results toolkit.The toolkit is being developed as part of [EDGE platform](https://github.com/LANL-Bioinformatics/EDGE). 
-[![Build Status](https://travis-ci.org/mshakya/Phamer.svg?branch=master)](https://travis-ci.org/mshakya/Phamer)
-[![codecov.io](http://codecov.io/github/seninp-bioinfo/MetaComp/coverage.svg?branch=master)](http://codecov.io/github/seninp-bioinfo/MetaComp?branch=master)
 
-to use the library, simply load it into R environment:
+[![Build Status](https://travis-ci.org/mshakya/Phamer.svg?branch=master)](https://travis-ci.org/mshakya/Phamer)
+[![codecov](https://codecov.io/gh/mshakya/Phamer/branch/master/graph/badge.svg)](https://codecov.io/gh/mshakya/Phamer)
+
+To use the library, simply load it into R environment:
 
     library(phameR)
