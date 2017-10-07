@@ -9,7 +9,7 @@ annotate_table(phy, annot_table)
 \arguments{
 \item{phy}{A rooted tree object.}
 
-\item{annot_table}{Annotation table where taxa are assigned to groups based on publication or other sources. Groups must be in column labeled Phylo.group.}
+\item{annot_table}{Annotation table where taxa are assigned to groups based on publication or other sources. Groups must be in column labeled Phylo.group and the first column must correspond to first taxa.}
 }
 \value{
 A dataframe where all the taxa are now assigned to a group based on monophylyl.

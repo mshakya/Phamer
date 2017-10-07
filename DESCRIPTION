@@ -6,7 +6,7 @@ Author: Migun Shakya
 Maintainer: Migun Shakya <migun@lanl.gov>
 Description: The package uses many already available R packages that deals with phylogeny to write custom code to achience custom goals as set by me and my projects.
 Depends:
-    R (>= 3.1.0)
+    R (>= 3.4.0)
 Imports:
     phytools,
     dplyr,
@@ -16,7 +16,8 @@ Imports:
 Suggests:
     testthat,
     knitr,
-    rmarkdown
+    rmarkdown,
+    devtools
 LinkingTo:
 LazyData: TRUE
 License: GPL-2
