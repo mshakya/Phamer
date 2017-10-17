@@ -3,7 +3,7 @@ NULL
 #' Assigns unassigned taxa in a clade to a group based on assignment of other taxa from the table
 
 #' @param phy A rooted tree object.
-#' @param annot_table Annotation table where taxa are assigned to groups based on publication or other sources. Groups must be in column labeled Phylo.group and the first column must correspond to first taxa.
+#' @param annot_table A data frame where each row has a taxa and corresponding groups. Groups must be in column labeled `Phylo.group` and the first column must be taxa name in `phy`.
 #'
 #' @return A dataframe where all the taxa are now assigned to a group based on monophylyl.
 #'
@@ -14,6 +14,10 @@ annotate_table <- function(phy, annot_table) {
     #check if tree is rooted.
     if ( !ape::is.rooted(phy) ) {
         stop(paste("Specified tree is not rooted, please root the tree and try again!"))
+    }
+
+    if ( !all(phy$tip.label %in% annot_table[, 1])) {
+        stop(paste("Specified tree taxa and table's first column do not match, fix, and try again!"))
     }
 
   # get list of groups from the annotation table
