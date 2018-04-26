@@ -6,18 +6,20 @@ Author: Migun Shakya
 Maintainer: Migun Shakya <migun@lanl.gov>
 Description: The package uses many already available R packages that deals with phylogeny to write custom code to achience custom goals as set by me and my projects.
 Depends:
-    R (>= 3.4.0)
+    R (>= 3.4.2)
 Imports:
-    phytools,
+    ape,
     dplyr,
     phangorn,
-    ape,
+    phytools,
     geiger,
+    ggtree
 Suggests:
     testthat,
     knitr,
     rmarkdown,
-    devtools
+    devtools,
+    roxygen2
 LinkingTo:
 LazyData: TRUE
 License: GPL-2
