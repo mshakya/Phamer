@@ -22,10 +22,12 @@ annotate_table <- function(phy, annot_table) {
 
   # get list of groups from the annotation table
   phylo_groups <- as.vector(unique(annot_table$Phylo.group))
+  # remove empty ones
+  phylo_groups <- phylo_groups[phylo_groups != ""]
   final_table <- data.frame(c(tip = c(), clade.name = c()))
   for (group in phylo_groups) {
     #  get names of taxa that are within the group
-    taxa_in_group <- as.vector(subset(annot_table, Phylo.group == group  )$Organism.name.strain)
+    taxa_in_group <- as.vector(subset(annot_table, Phylo.group == group  )[,1])
     # get the most recent common ancestor of those taxa
     MRCA = phytools::findMRCA(phy, tips = taxa_in_group)
     # if the taxa is not null
